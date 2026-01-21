@@ -6,6 +6,10 @@ This repository is a **starter template** for practicing:
 - Intentional merge conflicts + manual resolution
 - Clean history using **Squash and merge**
 
+## Shared Section
+Database module is implemented under /api/db.
+
+
 ## Quick Start
 
 ```bash
