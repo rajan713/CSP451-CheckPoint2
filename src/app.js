@@ -3,8 +3,12 @@ const path = require("path");
 
 const { router: apiRouter } = require("./routes/api");
 const { router: viewRouter } = require("./routes/views");
+const authRoute = require("./routes/auth");
+
 const usersRoutes = require("./routes/users");
 const healthRoutes = require("./routes/health");
+const dbRoutes = require("./routes/db");
+
 
 const app = express();
 
@@ -18,6 +22,10 @@ app.use(express.static(path.join(__dirname, "..", "public")));
 // Routes
 app.use("/", viewRouter);
 app.use("/api", apiRouter);
+app.use("/api/auth", authRoute);
+app.use("/api/users", usersRoutes);
+app.use("/api/health", healthRoutes);
+app.use("/api/db", dbRoutes);
 
 // 404 handler
 app.use((req, res) => {
@@ -29,13 +37,13 @@ app.use((err, req, res, next) => {
   console.error("Unhandled error:", err);
   res.status(500).json({ error: "Internal Server Error" });
 });
+
 app.use("/api/users", usersRoutes);
 app.use("/api/health", healthRoutes);
+app.use("/api/db", dbRoutes);
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server running at http://localhost:${PORT}`);
 });
-const authRoute = require("./routes/auth");
-app.use("/api/auth", authRoute);
 
