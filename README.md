@@ -7,8 +7,9 @@ This repository is a **starter template** for practicing:
 - Clean history using **Squash and merge**
 
 ## Shared Section
-Database module is implemented under /api/db.
 
+API endpoints are implemented under /api/users and /api/health.
+Database module is implemented under /api/db.
 
 ## Quick Start
 
