@@ -7,7 +7,9 @@ This repository is a **starter template** for practicing:
 - Clean history using **Squash and merge**
 
 ## Shared Section
+
 API endpoints are implemented under /api/users and /api/health.
+Database module is implemented under /api/db.
 
 ## Quick Start
 
@@ -37,6 +39,9 @@ Create these branches exactly:
 ## Suggested Conflict Targets
 To intentionally create a merge conflict, edit the same lines in one of:
 - `README.md`
+## Authentication Feature
+User authentication is handled using the /api/auth/login endpoint.
+
 - `src/app.js`
 - `src/routes/api.js`
 
