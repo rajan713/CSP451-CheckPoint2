@@ -3,6 +3,7 @@ const path = require("path");
 
 const { router: apiRouter } = require("./routes/api");
 const { router: viewRouter } = require("./routes/views");
+const usersRoutes = require("./routes/users");
 
 const app = express();
 
@@ -27,6 +28,7 @@ app.use((err, req, res, next) => {
   console.error("Unhandled error:", err);
   res.status(500).json({ error: "Internal Server Error" });
 });
+app.use("/api/users", usersRoutes);
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
