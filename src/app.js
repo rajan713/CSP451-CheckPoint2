@@ -4,6 +4,7 @@ const path = require("path");
 const { router: apiRouter } = require("./routes/api");
 const { router: viewRouter } = require("./routes/views");
 const usersRoutes = require("./routes/users");
+const healthRoutes = require("./routes/health");
 
 const app = express();
 
@@ -29,6 +30,7 @@ app.use((err, req, res, next) => {
   res.status(500).json({ error: "Internal Server Error" });
 });
 app.use("/api/users", usersRoutes);
+app.use("/api/health", healthRoutes);
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
