@@ -6,6 +6,9 @@ This repository is a **starter template** for practicing:
 - Intentional merge conflicts + manual resolution
 - Clean history using **Squash and merge**
 
+## Shared Section
+API endpoints are implemented under /api/users and /api/health.
+
 ## Quick Start
 
 ```bash
