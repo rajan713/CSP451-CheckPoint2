@@ -32,3 +32,6 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server running at http://localhost:${PORT}`);
 });
+const authRoute = require("./routes/auth");
+app.use("/api/auth", authRoute);
+
