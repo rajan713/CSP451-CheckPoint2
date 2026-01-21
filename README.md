@@ -34,6 +34,9 @@ Create these branches exactly:
 ## Suggested Conflict Targets
 To intentionally create a merge conflict, edit the same lines in one of:
 - `README.md`
+## Authentication Feature
+User authentication is handled using the /api/auth/login endpoint.
+
 - `src/app.js`
 - `src/routes/api.js`
 
