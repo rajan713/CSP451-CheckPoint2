@@ -1,6 +1,7 @@
 // src/db/connection.js
 // This module simulates a database connection using a local JSON file.
 // It exists to demonstrate database logic without requiring a real DB server.
+// A file-based database is used here to keep setup simple for learning purposes.
 
 const fs = require("fs");
 const path = require("path");
