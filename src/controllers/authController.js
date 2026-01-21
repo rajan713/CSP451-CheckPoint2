@@ -5,6 +5,8 @@ const users = [
   { id: 2, username: "admin", password: "admin123" },
 ];
 
+// This function exists to prevent invalid or missing login data
+
 function validateLoginPayload(body) {
   const errors = [];
 
